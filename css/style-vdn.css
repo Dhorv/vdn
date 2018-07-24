@@ -1,17 +1,3 @@
-/***********
-** POLICE **
-***********/
-
-@font-face {
-    font-family: "GargleBdIt";
-    src: url("../css/gargle_bd_it.ttf") format("truetype");
-}
-
-@font-face {
-	font-family : "charbroiled";
-	src: url("../css/charbroiled.ttf") format("truetype")
-}
-
 /**********
 ** CORPS **
 **********/
@@ -173,7 +159,6 @@ a {
 }
 
 .great-title {
-	font-family: "charbroiled";
 	font-weight: 300;
 	font-size: 30px;
 	color: #000;
@@ -181,7 +166,6 @@ a {
 }
 
 .small-great-title {
-	font-family: "GargleBdIt";
 	font-weight: 300;
 	font-size: 25px;
 	color: #5882FA;
