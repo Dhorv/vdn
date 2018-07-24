@@ -1,10 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 
-    <head>
-		<!-- Favicon -->
+  <head>
 		<link rel="icon" href="image/favicon.ico">
-		<!-- Définition de l'encodage -->
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 		<title>L'actu du club de badminton &quot;Les Volants de Nevers&quot; (VDN)</title>
 		<meta name="keywords" content="badminton,volant,nevers,vdn,nievre,ufolep,sport,
@@ -12,97 +10,87 @@
 		palmares,actu,actualites,evenement,evenements,tournoi,double,doubles,mixte,homme,hommes,dame,dames,simple,simples,
 		photo,photos,revue,presse,articles,journal,journaux,partenaires,histoire,historique,regles,jeu,points,sets,comptage">
 		<meta name="description" content="Le site web du club de badminton &quot;Les Volants de Nevers&quot; (VDN)">
-		<!-- Appel de la feuille de style -->
 		<link rel="stylesheet" type="text/css" href="css/style-vdn.css" />
-		<!-- //////////////////// -->
-        <!-- // Fonctions JS /// -->
-        <!-- ////////////////// -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $( "#navbar li" ).hover(function() {
-                    $(this).find('.activebox').fadeToggle();
-                });
-            });
-        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $( "#navbar li" ).hover(function() {
+          $(this).find('.activebox').fadeToggle();
+        });
+      });
+    </script>
 	</head>
 	
 	<body>
-		<!-- MENU -->
-		<div id="navbar">
-            <ul id="menu">
-                <li>
-                    <a href="index.html">
-                        <img alt="icone accueil volants de nevers" src="image/0001-home.png"  width="64" height="64" />
-                    </a>
+    <div id="navbar">
+      <ul id="menu">
+        <li>
+          <a href="index.html">
+            <img alt="icone accueil volants de nevers" src="image/0001-home.png"  width="64" height="64" />
+          </a>
 					<a class="activebox" style="display:none;" href="index.html">
 						<h2>Accueil</h2>
 						<p>Retourner à l'accueil</p>
 					</a>
-                </li>
-                <li>
-                    <a href="actu.html">
-                        <img alt="icone actualite volants de nevers" src="image/0005-newspaper.png"  width="64" height="64" />
-                    </a>
-                    <a class="activebox" style="display:none;" href="actu.html">
-						<h2>Actualités</h2>
-						<p>Les dernières actualités</p>
-					</a>
-                </li>
-                <li>
-                    <a href="regles.html">
-                        <img alt="icone regle du jeu volants de nevers" src="image/0100-raquette.png" />
-                    </a>
-                    <a class="activebox" style="display:none;" href="regles.html">
-						<h2>Règles</h2>
-						<p>Les règles du jeu</p>
-					</a>
-                </li>
-                <li>
-                    <a href="contact.html">
-                        <img alt="icone contact volants de nevers" src="image/0069-address-book.png"  width="64" height="64" />
-                    </a>
-                    <a class="activebox" style="display:none;" href="contact.html">
-						<h2>Contact</h2>
-						<p>Les coordonnées du club</p>
-					</a>
-                </li>
-            </ul>
-            <span><a target="_blank" href="http://wastylique.fr">Propulsé par<br /> <img src="image/logo-was.png" alt="Web Art Stylique" height="30px"/></a></span>
-        </div>
+        </li>
+        <li>
+          <a href="actu.html">
+              <img alt="icone actualite volants de nevers" src="image/0005-newspaper.png"  width="64" height="64" />
+          </a>
+          <a class="activebox" style="display:none;" href="actu.html">
+            <h2>Actualités</h2>
+            <p>Les dernières actualités</p>
+          </a>
+        </li>
+        <li>
+            <a href="regles.html">
+                <img alt="icone regle du jeu volants de nevers" src="image/0100-raquette.png" />
+            </a>
+            <a class="activebox" style="display:none;" href="regles.html">
+              <h2>Règles</h2>
+              <p>Les règles du jeu</p>
+            </a>
+        </li>
+        <li>
+          <a href="contact.html">
+              <img alt="icone contact volants de nevers" src="image/0069-address-book.png"  width="64" height="64" />
+          </a>
+          <a class="activebox" style="display:none;" href="contact.html">
+            <h2>Contact</h2>
+            <p>Les coordonnées du club</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <header class="header">
+      <img src="image/logo_vdn_caro.png" alt="logo des volants de nevers" />
+      <h1>Les Volants de Nevers<br />Actualités du club <span>Dernière mise à jour : 27/07/2017</span></h1>
+    </header>
         
-        <!-- EN TETE -->
-        <header class="header">
-            <img src="image/logo_vdn_caro.png" alt="logo des volants de nevers" />
-            <h1>Les Volants de Nevers<br />Actualités du club <span>Dernière mise à jour : 27/07/2017</span></h1>
-        </header>
-        
-        <div id="slideshow">
+    <div id="slideshow">
 			<ul id="sContent">
-				<li><img src="image/photo-accueil.jpg" alt="photo accueil des volants de nevers" /></li><!--
-				--><li><img src="image/photo-entrainement.jpg" alt="photo entrainement des volants de nevers" /></li><!--
-				--><li><img src="image/photo-outils.jpg" alt="photo outils des volants de nevers" /></li><!--
-				--><li><img src="image/photo-raquette.jpg" alt="photo raquette des volants de nevers" /></li><!--
-				--><li><img src="image/photo-volant.jpg" alt="photo volant des volants de nevers" /></li>
+				<li><img src="image/photo-accueil.jpg" alt="photo accueil des volants de nevers" /></li>
+        <li><img src="image/photo-entrainement.jpg" alt="photo entrainement des volants de nevers" /></li>
+        <li><img src="image/photo-outils.jpg" alt="photo outils des volants de nevers" /></li>
+        <li><img src="image/photo-raquette.jpg" alt="photo raquette des volants de nevers" /></li>
+        <li><img src="image/photo-volant.jpg" alt="photo volant des volants de nevers" /></li>
 			</ul>
 		</div>
-        
-        <!-- CONTENU PRINCIPAL -->
-        <div class="main">
-        
-       		<h2 class="great-title">Téléchargements des volants de Nevers</h2>
-        	
-        	<p class="content">
-        		<table>
-        			<tr>
-        				<th><a href="fichiers/calendrier_saison.pdf" target="_blank"><img src="image/0097-download.png" alt="icone telechargement volants de nevers" /></a></th>
-        				<th><a href="fichiers/livret_accueil.pdf" target="_blank"><img src="image/0097-download.png" alt="icone telechargement volants de nevers" /></a></th>
-        			</tr>
-					<tr>
-        				<td><h3 class="small-great-title">Le calendrier 2017-2018 du VDN</h3></th>
-        				<td><h3 class="small-great-title">La plaquette de présentation du VDN</h3></th>
-        			</tr>
-				</table>
+
+    <div class="main">
+      <h2 class="great-title">Téléchargements des volants de Nevers</h2>
+      <p class="content">
+        <table>
+          <tr>
+            <th><a href="fichiers/calendrier_saison.pdf" target="_blank"><img src="image/0097-download.png" alt="icone telechargement volants de nevers" /></a></th>
+            <th><a href="fichiers/livret_accueil.pdf" target="_blank"><img src="image/0097-download.png" alt="icone telechargement volants de nevers" /></a></th>
+          </tr>
+          <tr>
+            <td><h3 class="small-great-title">Le calendrier 2017-2018 du VDN</h3></th>
+            <td><h3 class="small-great-title">La plaquette de présentation du VDN</h3></th>
+          </tr>
+        </table>
 			</p>
         
 			<h3 class="small-great-title">27 juillet 2017 :</h3>
@@ -121,13 +109,13 @@
 				Comme chaque année le VDN sera présent au "samedi sport", Parc Roger Salengro, pour essayer la pratique du badminton, le samedi 9 septembre 2017 toute la journée.
 			</p>
 			
-			
 			<!-- <a href="http://www.compteurdevisite.com" target="_Blank" title="compteur gratuit">Nb de visites<br/> -->
 			<script type="text/javascript" src="http://counter10.freecounter.ovh/private/countertab.js?c=e58960a1b3d27dd6b23d2d49723ab0b0"></script>
-			<noscript><a href="http://www.compteurdevisite.com" title="compteur"><img src="http://counter10.freecounter.ovh/private/compteurdevisite.php?c=e58960a1b3d27dd6b23d2d49723ab0b0" border="0" title="compteur" alt="compteur"></a>
+			<noscript>
+        <a href="http://www.compteurdevisite.com" title="compteur">
+          <img src="http://counter10.freecounter.ovh/private/compteurdevisite.php?c=e58960a1b3d27dd6b23d2d49723ab0b0" border="0" title="compteur" alt="compteur">
+        </a>
 			</noscript>
-				
-        </div>
-        
+    </div>
 	</body>
 </html>
