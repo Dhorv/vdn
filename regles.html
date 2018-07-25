@@ -4,83 +4,59 @@
 		<link rel="icon" href="image/favicon.ico">
 		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 		<title>Les r&egrave;gles du jeu  &quot;Les Volants de Nevers&quot; (VDN)</title>
-		<meta name="keywords" content="badminton,volant,nevers,vdn,nievre,ufolep,sport,
-		raquette,tamis,filet,poteau,speedminton,blackminton,terrain,regles,jeu,coup,coups,service,
-		palmares,actu,actualites,evenement,evenements,tournoi,double,doubles,mixte,homme,hommes,dame,dames,simple,simples,
-		photo,photos,revue,presse,articles,journal,journaux,partenaires,histoire,historique,regles,jeu,points,sets,comptage">
+		<meta name="keywords" content="badminton,volant,nevers,vdn,nievre,ufolep,sport,raquette,tamis,filet,poteau,speedminton,blackminton,terrain,regles,jeu,coup,coups,service,palmares,actu,actualites,evenement,evenements,tournoi,double,doubles,mixte,homme,hommes,dame,dames,simple,simples,photo,photos,revue,presse,articles,journal,journaux,partenaires,histoire,historique,regles,jeu,points,sets,comptage">
 		<meta name="description" content="Le site web du club de badminton &quot;Les Volants de Nevers&quot; (VDN)">
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style-vdn.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $( "#navbar li" ).hover(function() {
-          $(this).find('.activebox').fadeToggle();
-        });
-      });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/semantic.min.js"></script>
 	</head>
 	
-	<body>
-    <div id="navbar">
-      <ul id="menu">
-        <li>
-          <a href="index.html">
-            <img alt="icone accueil volants de nevers" src="image/0001-home.png"  width="64" height="64" />
-          </a>
-					<a class="activebox" style="display:none;" href="index.html">
-						<h2>Accueil</h2>
-						<p>Retourner à l'accueil</p>
-					</a>
-        </li>
-        <li>
-          <a href="actu.html">
-              <img alt="icone actualite volants de nevers" src="image/0005-newspaper.png"  width="64" height="64" />
-          </a>
-          <a class="activebox" style="display:none;" href="actu.html">
-            <h2>Actualités</h2>
-            <p>Les dernières actualités</p>
-          </a>
-        </li>
-        <li>
-            <a href="regles.html">
-                <img alt="icone regle du jeu volants de nevers" src="image/0100-raquette.png" />
-            </a>
-            <a class="activebox" style="display:none;" href="regles.html">
-              <h2>Règles</h2>
-              <p>Les règles du jeu</p>
-            </a>
-        </li>
-        <li>
-          <a href="contact.html">
-              <img alt="icone contact volants de nevers" src="image/0069-address-book.png"  width="64" height="64" />
-          </a>
-          <a class="activebox" style="display:none;" href="contact.html">
-            <h2>Contact</h2>
-            <p>Les coordonnées du club</p>
-          </a>
-        </li>
-      </ul>
+	<body class="body">
+    <div class="ui container">
+      <h1 class="ui dividing centered header">
+        <img class="ui image" src="image/logo_vdn_caro.png" alt="logo des volants de nevers" />
+        <div class="content">
+          Les Volants de Nevers - VDN
+          <div class="sub header">Club de badminton</div>
+        </div>
+      </h1>
     </div>
 
-    <header class="header">
-      <img src="image/logo_vdn_caro.png" alt="logo des volants de nevers" />
-      <h1>Les Volants de Nevers<br />Les r&egrave;gles du jeu</h1>
-    </header>
-        
-    <div id="slideshow">
-			<ul id="sContent">
-				<li><img src="image/photo-accueil.jpg" alt="photo accueil des volants de nevers" /></li>
-        <li><img src="image/photo-entrainement.jpg" alt="photo entrainement des volants de nevers" /></li>
-        <li><img src="image/photo-outils.jpg" alt="photo outils des volants de nevers" /></li>
-        <li><img src="image/photo-raquette.jpg" alt="photo raquette des volants de nevers" /></li>
-        <li><img src="image/photo-volant.jpg" alt="photo volant des volants de nevers" /></li>
-			</ul>
-		</div>
+    <!-- Use "fluid eight item" to center items... -->
+    <!-- Use fake items have external dividers... -->
+    <div class="ui inverted teal massive fluid eight item menu navigation">
+      <div class="item"></div>
+      <a class="item" href="index.html">
+        <i class="home icon"></i>
+        Accueil
+      </a>
+      <a class="item" href="actu.html">
+        <i class="newspaper icon"></i>
+        Actualités
+      </a>
+      <a class="item active" href="regles.html">
+        <i class="balance scale icon"></i>
+        Règles
+      </a>
+      <a class="item" href="contact.html">
+        <i class="at icon"></i>
+        Contact
+      </a>
+      <div class="item"></div>
+    </div>
 
-    <div class="main">
-      <h2 class="great-title">- Le but du jeu :</h2>
+    <div class="ui vertical relaxed tertiary segment pageTitle">
+      <h1 class="ui header">
+        Les règles du badminton
+        <div class="sub header">Il est parfois utile de les connaître ;-)</div>
+      </h1>
+    </div>
 
-			<p class="content">
+    <div class="ui container main">
+      <h2 class="ui teal header">Le but du jeu :</h2>
+
+			<p>
 				Atteindre le terrain-cible adverse avec le volant ou contraindre l’adversaire à commettre une faute :
 				<ul>
 					<li>Le volant ne franchit pas le filet</li>
@@ -90,9 +66,9 @@
 				</ul>
 			</p>
 			
-			<h2 class="great-title">- La marque :</h2>
+			<h2 class="ui teal header">La marque :</h2>
 			
-			<p class="content">
+			<p>
 				Un match se joue au meilleur de trois sets en 21 points : le camp qui le premier remporte 2 sets , gagne le match.<br />
 				Le camp gagnant un échange, ajoute un point à son score.<br />
 				A 20 égalité, le set est prolongé : c'est le camp qui mène avec 2 points d'écart qui remporte le set.<br />
@@ -100,17 +76,17 @@
 				Le camp gagnant un set sert en premier dans le set suivant.
 			</p>
 				
-			<h2 class="great-title">- Interruptions et changement de demi terrain :</h2>
+			<h2 class="ui teal header">Interruptions et changement de demi terrain :</h2>
 			
-			<p class="content">
+			<p>
 				Quand le score atteint la première fois dans le set 11, les joueurs bénéficient d’un arrêt de 60 secondes.<br />
 				Une interruption de 120 secondes est possible entre chaque set.<br />
 				Au troisième set, les joueurs changent de demi terrain lorsque le score atteint la première fois 11.
 			</p>
 				
-			<h2 class="great-title">- Le service :</h2>
+			<h2 class="ui teal header">Le service :</h2>
 
-			<p class="content">
+			<p>
 				Il s’effectue en alternance à droite et à gauche, toujours en diagonale.<br />
 				Le fait que le volant touche le filet au service ne change pas les conditions de validité qui sont les limites du terrain fixées pour le service.<br />
 				Un service est correct lorsque :
@@ -122,11 +98,11 @@
 					<li>Le geste du service est continu vers l’avant</li>
 				</ul>
 				
-				<table>
+				<table class="ui table">
 					<tr>
 						<th>&nbsp;</h3></th>
-						<th><h3 class="small-great-title">En simple</h3></th>
-						<th><h3 class="small-great-title">En double</h3></th>
+						<th class="center aligned"><h3 class="small-great-title">En simple</h3></th>
+						<th class="center aligned"><h3 class="small-great-title">En double</h3></th>
 					</tr>
 					<tr>
 						<td><h3 class="small-great-title">Carrés de service</h3></td>
@@ -142,27 +118,20 @@
 
 			</p>
 
-			<h2 class="great-title">- Le jeu en simple :</h2>
+			<h2 class="ui teal header">Le jeu en simple :</h2>
 
-			<p class="content">
+			<p>
 				Au début du set et chaque fois que le score est pair, le serveur sert à droite. Si le score est impair il sert à gauche. Si le serveur gagne l’échange il marque le point et sert dans la zone alternative.<br />
 				Si le receveur gagne l’échange, il marque un point et prend le service.
 			</p>
 
-			<h2 class="great-title">- Le jeu en double :</h2>
+			<h2 class="ui teal header">Le jeu en double :</h2>
 
-			<p class="content">
+			<p>
 				Il n’y a qu’un seul service par joueur. Le service passe successivement d’un joueur à l’autre. Au début du set et quand le score est pair, le serveur sert depuis la zone de droite. Quand le score est impair il sert depuis la zone de gauche. Lorsque le camp du serveur gagne l’échange, celui-ci marque un point et le même serveur sert depuis l’autre zone de service. Si c’est le camp du receveur qui gagne l’échange, c’est lui qui marque un point. Le camp du receveur devient serveur.<br />
 				Le joueur du camp de réception qui a servi en dernier reste dans la zone de service dans laquelle il a servi la dernière fois. Et inversement pour le partenaire du receveur.<br />
 				Les joueurs ne changent pas de zones de service tant qu’ils ne marquent pas de point sur leur propre service.
 			</p>
-			
-			<script type="text/javascript" src="http://counter10.freecounter.ovh/private/countertab.js?c=e58960a1b3d27dd6b23d2d49723ab0b0"></script>
-			<noscript>
-        <a href="http://www.compteurdevisite.com" title="compteur">
-          <img src="http://counter10.freecounter.ovh/private/compteurdevisite.php?c=e58960a1b3d27dd6b23d2d49723ab0b0" border="0" title="compteur" alt="compteur">
-        </a>
-			</noscript>
     </div>
 	</body>
 </html>
