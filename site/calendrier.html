@@ -1220,6 +1220,9 @@
   <script>
     // Create tabs an auto-select current month
     let monthNumber = (new Date()).toISOString().substr(5, 2);
+    if (monthNumber === '08' || monthNumber === '09') {
+      monthNumber = '10';
+    }
     $('.tabular.menu .item').tab();
     $('.tabular.menu .item').tab('change tab', 'tab_' + monthNumber);
   </script>
