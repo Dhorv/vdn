@@ -40,15 +40,13 @@ var REGULAR_TRAINING_LOCATIONS = {
 };
 var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
-  5: '18h45-21h'
+  5: '19h-21h30'
 };
-var REGULAR_TRAINING_START = moment('2018-11-05');
-var REGULAR_TRAINING_END   = moment('2019-07-01');
+var REGULAR_TRAINING_START = moment('2019-09-02');
+var REGULAR_TRAINING_END   = moment('2020-07-03');
 var REGULAR_TRAINING_DAYS  = [1, 5]; // Monday, Friday
 
 var TXT_WORKS = 'Travaux à la maison des Sports';
-var TXT_CARS  = 'La séance se déroulera au gymnase du collège des Loges (Nevers).<br />' + 
-                'Pensez au covoiturage !';
 var TXT_LEASURE = 'Les joueurs des clubs locaux se rencontrent au cours d\'un tournoi amical.<br />'
                 + 'Les équipes sont constituées autant que possible de débutants.';
 var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soirée.<br />' +
@@ -70,75 +68,37 @@ var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soir
 
 var TRAINING_PATCHES = [
   // Moved trainings
-  { date: '2018-11-12', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2018-11-19', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2018-11-26', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2018-12-03', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2018-12-10', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2018-12-17', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2019-01-07', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2019-01-14', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date: '2019-01-21', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: TXT_CARS },
-  { date:        '2019-03-04',
-    kind:        'move',
-    warning:     'Gymnastique à la maison des Sports',
-    newLocation: LOC_VDN2 + ' (19h30-22h)',
-    comments:    'La Maison des Sports est réquisitionnée pour une compétition de gymnastique.<br/>' + TXT_CARS },
-  { date: '2019-06-03', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)' },
+  { date: '2019-09-02', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)' },
+  { date: '2019-09-09', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)' },
+  { date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)' },
+  { date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
+  { date: '2019-09-30', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
 
   // Canceled trainings
-  { date: '2018-11-05', kind: 'canceled', warning: TXT_WORKS },
-  { date: '2018-12-21', kind: 'canceled', comments: 'L\'effectif est extrêment réduit avant les vacances, la séance est annulée.' },
-  { date: '2019-06-21', kind: 'canceled', comments: 'En raison de la fête de la musique, très peu de joueurs ont manifesté leur intérêt pour cet entraînement.<br />En conséquence, la séance est annulée' },
-  { date: '2019-06-28', kind: 'canceled', comments: 'En raison de la canicule, la séance est annulée.' },
+  // { date: '2018-11-05', kind: 'canceled', warning: TXT_WORKS },
 
   // Holidays
-  { date: '2018-12-24', kind: 'holidays' },
-  { date: '2018-12-28', kind: 'holidays' },
-  { date: '2018-12-31', kind: 'holidays' },
-  { date: '2019-01-04', kind: 'holidays' },
-  { date: '2019-04-22', kind: 'holidays', tag: 'Jour férié', comments: 'Séance annulée en raison d\'un jour férié.<br />(Désolé pour l\'annonce tardive)' },
-  { date: '2019-06-10', kind: 'holidays', tag: 'Jour férié', comments: 'Séance annulée en raison d\'un jour férié (la Maison des Sports est fermée).' },
+  // { date: '2018-12-24', kind: 'holidays' },
   
   // Leasures
-  { date: '2019-06-24', kind: 'leasure', warning: 'Espace réduit', comments: 'Doubles H / Doubles D<br />' + TXT_LEASURE },
+  // { date: '2019-06-24', kind: 'leasure', warning: 'Espace réduit', comments: 'Doubles H / Doubles D<br />' + TXT_LEASURE },
 
   // Other
-  { date: '2019-02-11', kind: 'friendly', tag: 'Soirée crêpes', comments: 'Après une séance normale quoique légèrement raccourcie, nous fêterons la Chandeleur.<br /><br />Volontaires pour faire quelques crêpes ? Contactez Sabrina !' },
-  { date: '2019-02-25', kind: 'internal', comments: 'Double mixte<br /><br />Tournoi entre les membres du club.<br />Inscriptions auprès de Pierre-Alexandre ou par mail.<br /><br />Des terrains restent disponibles pour les joueurs qui souhaitent une séance normale.' },
-  { date: '2019-05-13', kind: 'friendly', tag: 'Soirée Handisport', comments: 'Cette soirée est l\'occasion d\'essayer le para-badminton (badminton en fauteuil roulant).<br />Nous clôturons cette soirée par un pot amical.' },
-  { date: '2019-07-01', kind: 'friendly', tag: 'Verre de l\'amitié', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: 'La séance se déroulera au gymnase du collège des Loges (Nevers).<br /><br />Pour cette dernière, nous terminerons l\'entraînement par un petit casse-croûte.<br />Chacun apporte un petit truc à grignoter et à boire afin de partager un moment convivial.' }
 ];
 
 var ADDITIONAL_EVENTS = [
+
   // Leasures
-  { date: '2018-10-15', kind: 'leasure', hours: '20h-22h30', location: LOC_VDN,      comments: 'Doubles mixtes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
-  { date: '2018-11-15', kind: 'leasure', hours: '20h-22h30', location: LOC_OPEN,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2018-12-13', kind: 'leasure', hours: '20h-23h30', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2019-01-17', kind: 'leasure', hours: '20h-23h30', location: LOC_ASGU,     comments: 'Doubles H / Doubles D<br />' + TXT_LEASURE },
-  { date: '2019-03-21', kind: 'leasure', hours: '20h-23h30', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2019-05-23', kind: 'leasure', hours: '20h-23h30', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2019-06-06', kind: 'leasure', hours: '20h-23h30', location: LOC_OPEN,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2019-06-13', kind: 'leasure', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2019-07-02', kind: 'leasure', hours: '20h-23h30', location: LOC_CHARIBAD, comments: 'Les joueurs des clubs locaux se rencontrent au cours d\'un tournoi amical.<br />Les équipes sont tirées au sort pour appairer des joueurs de clubs différents.', tag: 'Soirée challenge "mix"' },
+  // { date: '2018-10-15', kind: 'leasure', hours: '20h-22h30', location: LOC_VDN,      comments: 'Doubles mixtes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
 
   // Competition
-  { date: '2018-11-25', kind: 'competition', hours: '9h-17h', location: LOC_ASGU,     comments: 'Doubles mixtes / Doubles hommes<br /><br />Inscription : 5€/pers.<br />Repas offert. Résultats et verre de l\'amitié à 17h.<br />S\'inscrire auprès de Sabrina avant le 20/11.' },
-  { date: '2019-02-12', kind: 'competition', hours: '9h-17h', location: LOC_CHARIBAD, comments: 'Simples<br />Rencontres en simples contre les joueurs du coin.' },
-  { date: '2019-03-17', kind: 'competition', hours: '9h-18h', location: LOC_VDN,      comments: 'Doubles mixtes / Doubles hommes<br /><br />Inscription : 6€/pers.<br />Repas offert. Résultats et verre de l\'amitié en fin de journée.' },
+  // { date: '2018-11-25', kind: 'competition', hours: '9h-17h', location: LOC_ASGU,     comments: 'Doubles mixtes / Doubles hommes<br /><br />Inscription : 5€/pers.<br />Repas offert. Résultats et verre de l\'amitié à 17h.<br />S\'inscrire auprès de Sabrina avant le 20/11.' },
 
   // Team
-  { date: '2018-11-29', kind: 'team', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_TEAM },
-  { date: '2018-12-18', kind: 'team', hours: '20h-23h30', location: LOC_CHARIBAD, comments: 'Doubles H / Doubles D<br />' + TXT_TEAM },
-  { date: '2019-01-28', kind: 'team', hours: '20h-23h30', location: LOC_VDN,      comments: 'Doubles mixtes<br />' + TXT_TEAM + '<b>Pour les membres du VDN hors équipe :<br />Séance délocalisée au Gymnase des Loges</b>' },
-  { date: '2019-03-07', kind: 'team', hours: '20h-23h30', location: LOC_ASGU,     comments: 'Doubles H / Doubles D<br />' + TXT_TEAM },
-  { date: '2019-04-04', kind: 'team', hours: '20h-23h30', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_TEAM },
-  { date: '2019-05-09', kind: 'team', hours: '20h-23h30', location: LOC_OPEN,     comments: 'Doubles mixtes<br />' + TXT_TEAM },
+  // { date: '2018-11-29', kind: 'team', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_TEAM },
 
   // Other
-  { date: '2019-03-12', kind: 'friendly', tag: 'Rencontre amicale',                     hours: '19h-22h', location: LOC_OPEN,           comments: 'Le club de badminton ABN nous invite pour une rencontre amicale.<br />Cette rencontre ne prendra pas forme de tournoi, mais juste de jeu libre nous permettant de taper le volant entre joueurs.<br /><br />Cette soirée se conclura par une "auberge espagnole" (chacun peut emmener quelque chose à partager à la fin de la soirée).' },
-  { date: '2019-04-11', kind: 'canceled', tag: 'Soirée challenge loisirs<br />Annulée', hours: '19h-22h', location: LOC_OPEN,           comments: 'Doubles mixtes<br />' + TXT_LEASURE + '<br /><br />Soirée reportée au jeudi 6 juin.'  },
-  { date: '2019-06-25', kind: 'friendly', tag: 'Assemblée Générale',                    hours: '19h',     location: 'Locaux de la FOL', comments: 'L\'Assemblée Générale se déroulera à partir de 19h dans les locaux de la FOL, 7/11 rue du Commandant Rivière 58000 Nevers.<br />Venez nombreux !' }
+  { date: '2019-09-07', kind: 'friendly', tag: 'Samedi Sports', hours: '9h30-18h', location: 'Parc Salengro', comments: 'Le club tiendra un stand toute la journée. Volontaires recherchés !' },
 ];
 
 
