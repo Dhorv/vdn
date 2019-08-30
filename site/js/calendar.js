@@ -40,9 +40,9 @@ var REGULAR_TRAINING_LOCATIONS = {
 };
 var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
-  5: '19h-21h30'
+  5: '19h-22h'
 };
-var REGULAR_TRAINING_START = moment('2019-09-02');
+var REGULAR_TRAINING_START = moment('2019-09-09');
 var REGULAR_TRAINING_END   = moment('2020-07-03');
 var REGULAR_TRAINING_DAYS  = [1, 5]; // Monday, Friday
 
@@ -68,11 +68,10 @@ var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soir
 
 var TRAINING_PATCHES = [
   // Moved trainings
-  { date: '2019-09-02', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)' },
-  { date: '2019-09-09', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)' },
-  { date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-21h30)' },
-  { date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
-  { date: '2019-09-30', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-21h30)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
+  { date: '2019-09-09', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
+  { date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
+  { date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
+  { date: '2019-09-30', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
 
   // Canceled trainings
   // { date: '2018-11-05', kind: 'canceled', warning: TXT_WORKS },
