@@ -42,7 +42,7 @@ var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
   5: '19h-22h'
 };
-var REGULAR_TRAINING_START = moment('2019-09-09');
+var REGULAR_TRAINING_START = moment('2019-09-06');
 var REGULAR_TRAINING_END   = moment('2020-07-03');
 var REGULAR_TRAINING_DAYS  = [1, 5]; // Monday, Friday
 
