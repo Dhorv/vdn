@@ -88,10 +88,21 @@ var TRAINING_PATCHES = [
 var ADDITIONAL_EVENTS = [
 
   // Leasures
-  // { date: '2018-10-15', kind: 'leasure', hours: '20h-22h30', location: LOC_VDN,      comments: 'Doubles mixtes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
+  { date: '2019-10-01', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2019-10-17', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
+  { date: '2019-11-07', kind: 'leasure', hours: '20h', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2019-11-21', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2019-12-09', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
+  { date: '2020-01-14', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
+  { date: '2020-02-06', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-03-19', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-04-06', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
+  { date: '2020-05-14', kind: 'leasure', hours: '20h', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-06-04', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Tirage au sort des doubles<br />' + TXT_LEASURE },
 
   // Competition
-  // { date: '2018-11-25', kind: 'competition', hours: '9h-17h', location: LOC_ASGU,     comments: 'Doubles mixtes / Doubles hommes<br /><br />Inscription : 5€/pers.<br />Repas offert. Résultats et verre de l\'amitié à 17h.<br />S\'inscrire auprès de Sabrina avant le 20/11.' },
+  { date: '2019-11-24', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Précisions à venir<br />Les années précédentes, le format était le suivant : doubles mixtes et doubles hommes, repas ensemble le midi, inscription de 5 ou 6€.' },
+  { date: '2020-03-15', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Précisions à venir<br />Les années précédentes, le format était le suivant : doubles mixtes et doubles hommes, repas ensemble le midi, inscription de 5 ou 6€.' },
 
   // Team
   // { date: '2018-11-29', kind: 'team', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_TEAM },
