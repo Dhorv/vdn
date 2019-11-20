@@ -101,8 +101,8 @@ var ADDITIONAL_EVENTS = [
   { date: '2020-06-04', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Tirage au sort des doubles<br />' + TXT_LEASURE },
 
   // Competition
-  { date: '2019-11-24', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Précisions à venir<br />Les années précédentes, le format était le suivant : doubles mixtes et doubles hommes, repas ensemble le midi, inscription de 5 ou 6€.' },
-  { date: '2020-03-15', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Précisions à venir<br />Les années précédentes, le format était le suivant : doubles mixtes et doubles hommes, repas ensemble le midi, inscription de 5 ou 6€.' },
+  { date: '2019-11-24', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 5€.' },
+  { date: '2020-03-15', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 6€.' },
 
   // Team
   // { date: '2018-11-29', kind: 'team', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_TEAM },
