@@ -81,6 +81,7 @@ var TRAINING_PATCHES = [
   
   // Leasures
   // { date: '2019-06-24', kind: 'leasure', warning: 'Espace réduit', comments: 'Doubles H / Doubles D<br />' + TXT_LEASURE },
+  { date: '2020-03-13', kind: 'internal', warning: 'Pas d\'entraînement', comments: 'Tournoi en simples, réservé aux joueurs du club.<br />A priori, un seul tableau (hommes, femmes, débutants, anciens... seront mélangés), sauf s\'il y a suffisamment de participants pour faire deux groupes.' },
 
   // Other
 ];
@@ -95,6 +96,7 @@ var ADDITIONAL_EVENTS = [
   { date: '2019-12-09', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
   { date: '2020-01-14', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
   { date: '2020-02-06', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-02-24', kind: 'leasure', hours: '20h', location: LOC_OPEN,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
   { date: '2020-03-19', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
   { date: '2020-04-06', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
   { date: '2020-05-14', kind: 'leasure', hours: '20h', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
@@ -102,7 +104,7 @@ var ADDITIONAL_EVENTS = [
 
   // Competition
   { date: '2019-11-24', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 5€.' },
-  { date: '2020-03-15', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 6€.' },
+  { date: '2020-04-19', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 6€.' },
 
   // Team
   // { date: '2018-11-29', kind: 'team', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_TEAM },
