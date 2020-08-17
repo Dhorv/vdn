@@ -42,8 +42,8 @@ var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
   5: '19h-22h'
 };
-var REGULAR_TRAINING_START = moment('2020-09-07');
-var REGULAR_TRAINING_END   = moment('2021-07-02');
+var REGULAR_TRAINING_START = moment('2019-09-06');
+var REGULAR_TRAINING_END   = moment('2020-07-03');
 var REGULAR_TRAINING_DAYS  = [1, 5]; // Monday, Friday
 
 var TXT_WORKS = 'Travaux à la maison des Sports';
@@ -68,18 +68,13 @@ var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soir
 
 var TRAINING_PATCHES = [
   // Moved trainings
-  //{ date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
-  //{ date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
-
-  // Canceled trainings
-  // { date: '2018-11-05', kind: 'canceled', warning: TXT_WORKS },
-
-  // Holidays
-  // { date: '2018-12-24', kind: 'holidays' },
+  { date: '2019-09-09', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
+  { date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
+  { date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
+  { date: '2019-09-30', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
   
   // Leasures
-  // { date: '2019-06-24', kind: 'leasure', warning: 'Espace réduit', comments: 'Doubles H / Doubles D<br />' + TXT_LEASURE },
-  // { date: '2020-03-13', kind: 'internal', warning: 'Pas d\'entraînement', comments: 'Tournoi en simples, réservé aux joueurs du club.<br />A priori, un seul tableau (hommes, femmes, débutants, anciens... seront mélangés), sauf s\'il y a suffisamment de participants pour faire deux groupes.' },
+  { date: '2020-03-13', kind: 'internal', warning: 'Pas d\'entraînement', comments: 'Tournoi en simples, réservé aux joueurs du club.<br />A priori, un seul tableau (hommes, femmes, débutants, anciens... seront mélangés), sauf s\'il y a suffisamment de participants pour faire deux groupes.' },
 
   // Other
 ];
@@ -87,18 +82,25 @@ var TRAINING_PATCHES = [
 var ADDITIONAL_EVENTS = [
 
   // Leasures
-  //{ date: '2019-10-01', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  //{ date: '2019-10-17', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
-  //{ date: '2020-06-04', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Tirage au sort des doubles<br />' + TXT_LEASURE },
+  { date: '2019-10-01', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2019-10-17', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
+  { date: '2019-11-07', kind: 'leasure', hours: '20h', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2019-11-21', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2019-12-09', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
+  { date: '2020-01-14', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
+  { date: '2020-02-06', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-02-24', kind: 'leasure', hours: '20h', location: LOC_OPEN,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
+  { date: '2020-03-19', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-04-06', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE, warning: ' Pas d\'entraînement' },
+  { date: '2020-05-14', kind: 'leasure', hours: '20h', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-06-04', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Tirage au sort des doubles<br />' + TXT_LEASURE },
 
   // Competition
-  //{ date: '2019-11-24', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 5€.' },
-
-  // Team
-  // { date: '2018-11-29', kind: 'team', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_TEAM },
+  { date: '2019-11-24', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 5€.' },
+  { date: '2020-04-19', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 6€.' },
 
   // Other
-  { date: '2020-09-05', kind: 'friendly', tag: 'Samedi Sports', hours: '10h-18h', location: 'Parc Salengro', comments: 'Le club tiendra un stand toute la journée. Volontaires recherchés !' },
+  { date: '2019-09-07', kind: 'friendly', tag: 'Samedi Sports', hours: '9h30-18h', location: 'Parc Salengro', comments: 'Le club tiendra un stand toute la journée. Volontaires recherchés !' },
 ];
 
 
@@ -173,14 +175,7 @@ function drawCalendar() {
     addTab($calendarArea, $tabArea, allMonths[i], allDatesByMonth[allMonths[i]]);
   }
 
-  // Create tabs and auto-select current month if possible (else select the nearest month)
-  var tabDate = moment();
-  if (tabDate.isBefore(allDates[0].date)) {
-    tabDate = allDates[0].date;
-  }
-  if (tabDate.isAfter(allDates[allDates.length-1].date)) {
-    tabDate = allDates[allDates.length-1].date;
-  }
+  var tabDate = allDates[0].date;
   var tabId = 'tab_' + tabDate.year() + '_' + tabDate.month();
 
   $('.tabular.menu .item').tab();
