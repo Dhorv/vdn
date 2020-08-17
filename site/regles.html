@@ -6,6 +6,7 @@
 		<title>Les r&egrave;gles du jeu  &quot;Les Volants de Nevers&quot; (VDN)</title>
 		<meta name="keywords" content="badminton,volant,nevers,vdn,nievre,ufolep,sport,raquette,tamis,filet,poteau,speedminton,blackminton,terrain,regles,jeu,coup,coups,service,palmares,actu,actualites,evenement,evenements,tournoi,double,doubles,mixte,homme,hommes,dame,dames,simple,simples,photo,photos,revue,presse,articles,journal,journaux,partenaires,histoire,historique,regles,jeu,points,sets,comptage">
 		<meta name="description" content="Le site web du club de badminton &quot;Les Volants de Nevers&quot; (VDN)">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style-vdn.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -13,26 +14,20 @@
 	</head>
 	
 	<body class="body">
-    <!-- Use "fluid eight item" to center items... -->
-    <!-- Use fake items have external dividers... -->
-    <div class="ui inverted blue massive fluid eight item menu borderless navigation">
+    <!-- Use "fluid six item" to center items... -->
+    <div class="ui inverted blue massive fluid six item menu borderless navigation">
       <img class="ui image logo" src="image/black_logo.png" alt="logo des volants de nevers" />
-      <div>
-        <b class="ui inverted header">VDN</b><br />
-        <i class="subtitle">Volants De Nevers</i>
-      </div>
-      <div class="item"></div>
       <a class="item" href="index.html">
         <i class="home icon"></i>
         Accueil
       </a>
       <a class="item" href="actu.html">
         <i class="newspaper icon"></i>
-        Actualités
+        News
       </a>
       <a class="item" href="calendrier.html">
         <i class="calendar icon"></i>
-        Calendrier
+        Agenda
       </a>
       <a class="item active" href="regles.html">
         <i class="balance scale icon"></i>
@@ -42,7 +37,30 @@
         <i class="at icon"></i>
         Contact
       </a>
-      <div class="item"></div>
+    </div>
+
+    <div class="ui inverted blue fluid six item tiny menu borderless labeled icon mobileNavigation">
+      <img class="ui image logo" src="image/black_logo.png" alt="logo des volants de nevers" />
+      <a class="item" href="index.html">
+        <i class="home icon"></i>
+        Accueil
+      </a>
+      <a class="item" href="actu.html">
+        <i class="newspaper icon"></i>
+        News
+      </a>
+      <a class="item" href="calendrier.html">
+        <i class="calendar icon"></i>
+        Agenda
+      </a>
+      <a class="item active" href="regles.html">
+        <i class="balance scale icon"></i>
+        Règles
+      </a>
+      <a class="item" href="contact.html">
+        <i class="at icon"></i>
+        Contact
+      </a>
     </div>
 
     <div class="ui vertical relaxed tertiary segment pageTitle">
@@ -53,7 +71,7 @@
     </div>
 
     <div class="ui container main">
-      <div class="ui grid">
+      <div class="ui stackable grid">
         <div class="row">
           <div class="eight wide column">
             <div class="ui blue segment">
@@ -80,32 +98,6 @@
                 A 20 égalité, le set est prolongé : c'est le camp qui mène avec 2 points d'écart qui remporte le set.<br />
                 A 29 égalité, le camp marquant le premier 30 gagne le set.<br />
                 Le camp gagnant un set sert en premier dans le set suivant.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="sixteen wide column">
-            <div class="ui blue segment">
-              <h2 class="ui blue header">Zones de jeu</h2>
-                <table class="ui table">
-                  <tr>
-                    <th>&nbsp;</h3></th>
-                    <th class="center aligned"><h3 class="small-great-title">En simple</h3></th>
-                    <th class="center aligned"><h3 class="small-great-title">En double</h3></th>
-                  </tr>
-                  <tr>
-                    <td><h3 class="small-great-title">Carrés de service</h3></td>
-                    <td><img src="image/image-service-simple.jpg" alt="image carrés de service badminton en simple" /></td>
-                    <td><img src="image/image-service-double.jpg" alt="image carrés de service badminton en double" /></td>
-                  </tr>
-                  <tr>
-                    <td><h3 class="small-great-title">Surface de jeu</h3></td>
-                    <td><img src="image/image-surface-jeu-simple.jpg" alt="image surface de jeu badminton en simple" /></td>
-                    <td><img src="image/image-surface-jeu-double.jpg" alt="image surface de jeu badminton en double" /></td>
-                  </tr>
-                </table>
               </p>
             </div>
           </div>
@@ -161,6 +153,29 @@
                 <br />
                 Quand l'équipe du receveur gagne le point, c'est à son tour de servir. Si son score est pair, c'est le joueur de droite qui sert, sinon c'est le joueur de gauche.<br />
                 Comme le serveur se place en fonction du score de son équipe, il intervertit sa position avec celle de son partenaire à chaque fois. Si le point est perdu, l'équipe garde cette position pour recevoir le ou les prochains services.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="eight wide column">
+            <div class="ui blue segment">
+              <h2 class="ui blue header">Zones de jeu en simple</h2>
+              <h3 class="small-great-title">Carrés de service</h3>
+              <img class="ui image" src="image/image-service-simple.jpg" alt="image carrés de service badminton en simple" />
+              <h3 class="small-great-title">Surface de jeu</h3>
+              <img class="ui image" src="image/image-surface-jeu-simple.jpg" alt="image surface de jeu badminton en simple" />
+              </p>
+            </div>
+          </div>
+          <div class="eight wide column">
+            <div class="ui blue segment">
+              <h2 class="ui blue header">Zones de jeu en double</h2>
+              <h3 class="small-great-title">Carrés de service</h3>
+              <img class="ui image" src="image/image-service-double.jpg" alt="image carrés de service badminton en double" />
+              <h3 class="small-great-title">Surface de jeu</h3>
+              <img class="ui image" src="image/image-surface-jeu-double.jpg" alt="image surface de jeu badminton en double" />
               </p>
             </div>
           </div>

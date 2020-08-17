@@ -169,7 +169,7 @@ setTimeout(drawCalendar, 50);
 
 function drawCalendar() {
   var $calendarArea = $('#calendarArea');
-  var $tabArea = $('<div class="ui top attached tabular menu">').appendTo(calendarArea);
+  var $tabArea = $('<div class="ui top attached stackable menu">').appendTo(calendarArea);
 
   for (var i = 0; i < allMonths.length; i++) {
     addTab($calendarArea, $tabArea, allMonths[i], allDatesByMonth[allMonths[i]]);
@@ -178,8 +178,8 @@ function drawCalendar() {
   var tabDate = allDates[0].date;
   var tabId = 'tab_' + tabDate.year() + '_' + tabDate.month();
 
-  $('.tabular.menu .item').tab();
-  $('.tabular.menu .item').tab('change tab', tabId);
+  $('.menu .item').tab();
+  $('.menu .item').tab('change tab', tabId);
 }
 
 function addTab($calendarArea, $tabArea, monthIsoId, monthEvents) {

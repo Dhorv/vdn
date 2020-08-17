@@ -6,6 +6,7 @@
 		<title>Le club de badminton &quot;Les Volants de Nevers&quot; (VDN)</title>
 		<meta name="keywords" content="badminton,volant,nevers,vdn,nievre,ufolep,sport,raquette,tamis,filet,poteau,speedminton,blackminton,terrain,regles,jeu,coup,coups,service,palmares,actu,actualites,evenement,evenements,tournoi,double,doubles,mixte,homme,hommes,dame,dames,simple,simples,photo,photos,revue,presse,articles,journal,journaux,partenaires,histoire,historique,regles,jeu,points,sets,comptage">
 		<meta name="description" content="Le site web du club de badminton &quot;Les Volants de Nevers&quot; (VDN)">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style-vdn.css" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -13,26 +14,20 @@
 	</head>
 	
 	<body class="body">
-    <!-- Use "fluid eight item" to center items... -->
-    <!-- Use fake items have external dividers... -->
-    <div class="ui inverted blue massive fluid eight item menu borderless navigation">
+    <!-- Use "fluid six item" to center items... -->
+    <div class="ui inverted blue massive fluid six item menu borderless navigation">
       <img class="ui image logo" src="image/black_logo.png" alt="logo des volants de nevers" />
-      <div>
-        <b class="ui inverted header">VDN</b><br />
-        <i class="subtitle">Volants De Nevers</i>
-      </div>
-      <div class="item"></div>
       <a class="item active" href="index.html">
         <i class="home icon"></i>
         Accueil
       </a>
       <a class="item" href="actu.html">
         <i class="newspaper icon"></i>
-        Actualités
+        News
       </a>
       <a class="item" href="calendrier.html">
         <i class="calendar icon"></i>
-        Calendrier
+        Agenda
       </a>
       <a class="item" href="regles.html">
         <i class="balance scale icon"></i>
@@ -42,7 +37,30 @@
         <i class="at icon"></i>
         Contact
       </a>
-      <div class="item"></div>
+    </div>
+
+    <div class="ui inverted blue fluid six item tiny menu borderless labeled icon mobileNavigation">
+      <img class="ui image logo" src="image/black_logo.png" alt="logo des volants de nevers" />
+      <a class="item active" href="index.html">
+        <i class="home icon"></i>
+        Accueil
+      </a>
+      <a class="item" href="actu.html">
+        <i class="newspaper icon"></i>
+        News
+      </a>
+      <a class="item" href="calendrier.html">
+        <i class="calendar icon"></i>
+        Agenda
+      </a>
+      <a class="item" href="regles.html">
+        <i class="balance scale icon"></i>
+        Règles
+      </a>
+      <a class="item" href="contact.html">
+        <i class="at icon"></i>
+        Contact
+      </a>
     </div>
 
     <div class="ui vertical relaxed tertiary segment pageTitle">
@@ -73,23 +91,7 @@
     </div>
 
     <div class="ui container main">
-      <div class="ui two columns grid">
-        <div class="column">
-          <div class="ui images">
-            <div class="ui image">
-              <img src="image/photo-entrainement.jpg" alt="photo entrainement des volants de nevers" />
-            </div>
-            <div class="ui image">
-              <img src="image/photo-volant.jpg" alt="photo volant des volants de nevers" />
-            </div>
-            <div class="ui image">
-              <img src="image/2019-03-17 - Tournoi.JPG" alt="photo tournoi annuel des volants de nevers" />
-            </div>
-            <div class="ui image">
-              <img src="image/photo-raquette.jpg" alt="photo raquette des volants de nevers" />
-            </div>
-          </div>
-        </div>
+      <div class="ui stackable two columns grid">
         <div class="column">
           <div class="ui blue segment">
             <h3 class="ui blue header">Niveaux de jeu</h3>
@@ -132,6 +134,22 @@
               <li><b>Respect des joueurs</b> : bon esprit, non violence, non ségrégation, accès au jeu pour tous. Par exemple si des joueurs sont  en attente de jouer, il faut «tourner» pour leur permettre l’accès aux terrains.</li>
               <li><b>Partage</b> : d’un lieu de vie, de bons moments. Par exemple le mélange des joueurs lors des séances apporte autant humainement que sportivement.</li>
             </ul>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui images">
+            <div class="ui image">
+              <img src="image/photo-entrainement.jpg" alt="photo entrainement des volants de nevers" />
+            </div>
+            <div class="ui image">
+              <img src="image/photo-volant.jpg" alt="photo volant des volants de nevers" />
+            </div>
+            <div class="ui image">
+              <img src="image/2019-03-17 - Tournoi.JPG" alt="photo tournoi annuel des volants de nevers" />
+            </div>
+            <div class="ui image">
+              <img src="image/photo-raquette.jpg" alt="photo raquette des volants de nevers" />
+            </div>
           </div>
         </div>
       </div>
