@@ -8,9 +8,9 @@ body.body div.navigation {
 }
 
 body.body div.navigation img.logo {
-  height: 40px;
+  height: 50px;
   margin-right: 15px;
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 body.body div.navigation div i.subtitle {
@@ -22,9 +22,9 @@ body.body div.mobileNavigation {
 }
 
 body.body div.mobileNavigation img.logo {
-  height: 40px;
-  margin-right: 10px;
-  margin-top: 10px;
+  height: 50px;
+  margin-right: 5px;
+  margin-top: 5px;
 }
 
 body.body div.tertiary.segment.pageTitle {
