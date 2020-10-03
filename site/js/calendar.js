@@ -13,7 +13,7 @@ var KIND_COLORS = {
   leasure:     'green',
   move:        'grey',
   team:        'red',
-  training:    'blue'
+  training:    'grey'
 };
 var KIND_TAGS = {
   canceled:    'Séance annulée',
@@ -42,11 +42,12 @@ var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
   5: '19h30-22h30'
 };
+var CALENDAR_START = moment('2020-09-07');
+var CALENDAR_END = moment('2021-07-31');
 var REGULAR_TRAINING_START = moment('2020-09-07');
 var REGULAR_TRAINING_END   = moment('2021-07-02');
 var REGULAR_TRAINING_DAYS  = [1, 5]; // Monday, Friday
 
-var TXT_WORKS = 'Travaux à la maison des Sports';
 var TXT_LEASURE = 'Les joueurs des clubs locaux se rencontrent au cours d\'un tournoi amical.<br />'
                 + 'Les équipes sont constituées autant que possible de débutants.';
 var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soirée.<br />' +
@@ -72,7 +73,7 @@ var TRAINING_PATCHES = [
   //{ date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
 
   // Canceled trainings
-  // { date: '2018-11-05', kind: 'canceled', warning: TXT_WORKS },
+  //{ date: '2020-12-07', kind: 'canceled', warning: TXT_WORKS }
 
   // Holidays
   // { date: '2018-12-24', kind: 'holidays' },
@@ -87,15 +88,26 @@ var TRAINING_PATCHES = [
 var ADDITIONAL_EVENTS = [
 
   // Leasures
-  //{ date: '2019-10-01', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  //{ date: '2019-10-17', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
-  //{ date: '2020-06-04', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Tirage au sort des doubles<br />' + TXT_LEASURE },
+  { date: '2020-11-03', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2020-12-03', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
+  { date: '2021-01-14', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2021-02-01', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Simples dames, doubles hommes<br />' + TXT_LEASURE, warning: 'Pas de séance' },
+  { date: '2021-03-09', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
+  { date: '2021-04-01', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2021-04-29', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2021-05-17', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Simples hommes, doubles dames<br />' + TXT_LEASURE, warning: 'Pas de séance' },
+  { date: '2021-06-03', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Tirage au sort des doubles<br />' + TXT_LEASURE },
 
   // Competition
-  //{ date: '2019-11-24', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Doubles hommes, doubles mixtes<br />Repas ensemble le midi, inscription 5€.' },
+  { date: '2020-11-22', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Tournoi en double sur la journée.<br />Repas ensemble le midi.' },
+  { date: '2021-03-07', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Tournoi en double sur la journée.<br />Repas ensemble le midi.' },
 
   // Team
-  // { date: '2018-11-29', kind: 'team', hours: '20h-23h30', location: LOC_CORBIGNY, comments: 'Doubles mixtes<br />' + TXT_TEAM },
+  { date: '2020-12-07', kind: 'team', hours: '20h', location: LOC_VDN,      comments: 'Doubles mixtes<br />' + TXT_TEAM + '<br /><br />Espace réduit pour la séance normale.' },
+  { date: '2021-01-19', kind: 'team', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles hommes, doubles dames<br />' + TXT_TEAM },
+  { date: '2021-02-25', kind: 'team', hours: '20h', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_TEAM },
+  { date: '2021-04-05', kind: 'team', hours: '20h', location: LOC_VDN,      comments: 'Doubles hommes, doubles dames<br />' + TXT_TEAM + '<br /><br />Espace réduit pour la séance normale.' },
+  { date: '2021-05-06', kind: 'team', hours: '20h', location: LOC_ASGU,     comments: 'Simples hommes, simples dames<br />' + TXT_TEAM },
 
   // Other
   { date: '2020-09-05', kind: 'friendly', tag: 'Samedi Sports', hours: '10h-18h', location: 'Parc Salengro', comments: 'Le club tiendra un stand toute la journée. Volontaires recherchés !' },
@@ -108,17 +120,26 @@ var ADDITIONAL_EVENTS = [
 
 var allDates = [];
 
+// Create an empty calendar
+var cursor = CALENDAR_START.clone();
+while (cursor.isSameOrBefore(CALENDAR_END)) {
+  var date = cursor.clone();
+  allDates.push({
+    date: date,
+    kind: 'empty'
+  });
+  cursor.add(1, 'day');
+}
+
 // Training dates
 var cursor = REGULAR_TRAINING_START.clone();
 while (cursor.isSameOrBefore(REGULAR_TRAINING_END)) {
-  if (REGULAR_TRAINING_DAYS.indexOf(cursor.day()) !== -1) {
-    var date = cursor.clone();
-    allDates.push({
-      date:     date,
-      kind:     'training',
-      location: REGULAR_TRAINING_LOCATIONS[date.day()],
-      hours:    REGULAR_TRAINING_HOURS[date.day()]
-    });
+  var date = cursor.clone();
+  if (REGULAR_TRAINING_DAYS.indexOf(date.day()) !== -1) {
+    var existingEvent = findDateItem(date);
+    existingEvent.kind     = 'training';
+    existingEvent.location = REGULAR_TRAINING_LOCATIONS[date.day()];
+    existingEvent.hours    = REGULAR_TRAINING_HOURS[date.day()];
   }
   cursor.add(1, 'day');
 }
@@ -127,19 +148,21 @@ while (cursor.isSameOrBefore(REGULAR_TRAINING_END)) {
 for (var i = 0; i < TRAINING_PATCHES.length; i++) {
   var patch  = TRAINING_PATCHES[i];
   var origin = findDateItem(patch.date);
-  origin.kind        = patch.kind     || origin.kind;
-  origin.location    = patch.location || origin.location;
-  origin.hours       = patch.hours    || origin.hours;
-  origin.comments    = patch.comments || origin.comments;
-  origin.warning     = patch.warning  || origin.warning;
-  origin.tag         = patch.tag      || origin.tag;
-  origin.newLocation = patch.newLocation;
+  patchItem(origin, patch);
 }
 
 // Add special events
 for (var i = 0; i < ADDITIONAL_EVENTS.length; i++) {
-  ADDITIONAL_EVENTS[i].date = moment(ADDITIONAL_EVENTS[i].date);
-  allDates.push(ADDITIONAL_EVENTS[i]);
+  let additionalEvent = ADDITIONAL_EVENTS[i];
+  additionalEvent.date = moment(additionalEvent.date);
+
+  var existingEvent = findDateItem(additionalEvent.date);
+  if (!!existingEvent && (existingEvent.kind == 'empty' || existingEvent.location === additionalEvent.location)) {
+    patchItem(existingEvent, additionalEvent);
+  }
+  else {
+    allDates.push(additionalEvent);
+  }
 }
 
 // Sort then group by month
@@ -158,6 +181,16 @@ for (var i = 0; i < allDates.length; i++) {
   allDatesByMonth[month].push(allDates[i]);
 }
 
+function patchItem(origin, patch) {
+  origin.kind        = patch.kind     || origin.kind;
+  origin.location    = patch.location || origin.location;
+  origin.hours       = patch.hours    || origin.hours;
+  origin.comments    = patch.comments || origin.comments;
+  origin.warning     = patch.warning  || origin.warning;
+  origin.tag         = patch.tag      || origin.tag;
+  origin.newLocation = patch.newLocation;
+}
+
 
 // -----
 // Draw
@@ -167,42 +200,48 @@ setTimeout(drawCalendar, 50);
 
 function drawCalendar() {
   var $calendarArea = $('#calendarArea');
-  var $tabArea = $('<div class="ui top attached stackable menu">').appendTo(calendarArea);
 
-  for (var i = 0; i < allMonths.length; i++) {
-    addTab($calendarArea, $tabArea, allMonths[i], allDatesByMonth[allMonths[i]]);
-  }
+  var $dateMenu = $('<div class="ui one column stackable center aligned grid" style="margin: 10px;"><div class="ui buttons"></div></div>').appendTo(calendarArea);
+  var $prevDateBtn = $('<div class="ui icon tiny button"><i class="icon chevron left"></i></div>').appendTo($dateMenu);
+  var $dateDisplay = $('<div class="ui basic tiny button"></div>').appendTo($dateMenu);
+  var $nextDateBtn = $('<div class="ui icon tiny button"><i class="icon right chevron"></i></div>').appendTo($dateMenu);
 
-  // Create tabs and auto-select current month if possible (else select the nearest month)
-  var tabDate = moment();
-  if (tabDate.isBefore(allDates[0].date)) {
-    tabDate = allDates[0].date;
-  }
-  if (tabDate.isAfter(allDates[allDates.length-1].date)) {
-    tabDate = allDates[allDates.length-1].date;
-  }
-  var tabId = 'tab_' + tabDate.year() + '_' + tabDate.month();
+  var $monthContent = $('<div class="ui segment">').appendTo($calendarArea);
 
-  $('.menu .item').tab();
-  $('.menu .item').tab('change tab', tabId);
+  var currentMonth = moment().startOf('month');
+  drawMonth(currentMonth, $dateDisplay, $monthContent);
+
+  $prevDateBtn.on('click', function() {
+    moveMonth(-1);
+  });
+  $nextDateBtn.on('click', function() {
+    moveMonth(1);
+  });
+
+  function moveMonth(diff) {
+    currentMonth.add(diff, 'month');
+    drawMonth(currentMonth, $dateDisplay, $monthContent);
+  }
 }
 
-function addTab($calendarArea, $tabArea, monthIsoId, monthEvents) {
-  var month = moment(monthIsoId);
-  var tabId = 'tab_' + month.year() + '_' + month.month();
-  var tabLabel = upperFirst(month.format('MMMM'));
-  $('<div class="item" data-tab="' + tabId + '">' + tabLabel + '</div>').appendTo($tabArea);
+function drawMonth(currentMonth, $dateDisplay, $monthContent) {
+  $dateDisplay.text(upperFirst(currentMonth.format('MMMM YYYY')));
+  $monthContent.empty();
 
-  var $tabContent = $('<div class="ui tab bottom attached segment" data-tab="' + tabId + '">').appendTo($calendarArea);
-  var $eventTable = $('<table class="ui table">').appendTo($tabContent);
+  var monthEvents = allDatesByMonth[currentMonth.format('YYYY-MM')];
+  if (!monthEvents) {
+    $('<div>En dehors de la saison tu te trouves.</div>').appendTo($monthContent);
+    return;
+  }
 
+  var $eventTable = $('<table class="ui table">').appendTo($monthContent);
   for (var i = 0; i < monthEvents.length; i++) {
     addEvent($eventTable, monthEvents[i]);
   }
 }
 
 function addEvent($eventTable, monthEvent) {
-  var date        = upperFirst(monthEvent.date.format('dddd D MMMM YYYY'));
+  var date        = upperFirst(monthEvent.date.format('ddd D'));
   var hours       = monthEvent.hours;
   var location    = monthEvent.location;
   var newLocation = monthEvent.newLocation;
@@ -211,38 +250,53 @@ function addEvent($eventTable, monthEvent) {
   var comments    = monthEvent.comments || '';
   var warning     = monthEvent.warning;
 
+  if (monthEvent.kind === 'deleted') {
+    return;
+  }
+
   if (monthEvent.kind === 'move' || monthEvent.kind === 'canceled' || monthEvent.kind === 'holidays') {
     location = null;
     hours = '';
   }
 
   var $tr = $('<tr>').appendTo($eventTable);
-  var $summaryTd  = $('<td></td>').appendTo($tr);
-  $('<b>' + date + '</b>').appendTo($summaryTd);
+
+  // Date
+  var $dateTd  = $('<td class="collapsing"></td>').appendTo($tr);
+  $('<b>' + date + '</b>').appendTo($dateTd);
+
+  // Hours
+  var $hoursTd  = $('<td class="collapsing"></td>').appendTo($tr);
   if (!!hours) {
-    $('<span> - <i>' + hours + '</i></span>').appendTo($summaryTd);
+    $('<span><i>' + hours + '</i></span>').appendTo($hoursTd);
   }
 
-  if (!!location) {
-    $('<br />').appendTo($summaryTd);
-    $('<span>' + location + '</span>').appendTo($summaryTd);
+  // Tag
+  var $tagTd = $('<td class="collapsing"></td>').appendTo($tr);
+  if (!!tag) {
+    $('<span class="ui ' + color + ' label">' + tag + '</span>').appendTo($tagTd);
   }
+
+  // Location
+  var $locationTd  = $('<td></td>').appendTo($tr);
+  if (!!location) {
+    $('<span>' + location + '</span>').appendTo($locationTd);
+  }
+
+  // Comments
+  var $commentsTd = $('<td>' + comments + '</td>').appendTo($tr);
+
   if (!!warning) {
-    $('<br />').appendTo($summaryTd);
-    $('<i class="ui red icon warning sign"></i>').appendTo($summaryTd);
-    $('<span style="color: red;">' + warning + '</span>').appendTo($summaryTd);
+    $('<br />').appendTo($commentsTd);
+    $('<i class="ui red icon warning sign"></i>').appendTo($commentsTd);
+    $('<span style="color: red;">' + warning + '</span>').appendTo($commentsTd);
   }
   if (!!newLocation) {
-    $('<br />').appendTo($summaryTd);
-    $('<i class="ui blue icon right arrow"></i>').appendTo($summaryTd);
-    $('<span>' + newLocation + '</span>').appendTo($summaryTd);
+    $('<br />').appendTo($commentsTd);
+    $('<i class="ui blue icon right arrow"></i>').appendTo($commentsTd);
+    $('<span>' + newLocation + '</span>').appendTo($commentsTd);
   }
 
-  var $tagTd = $('<td class="center aligned">' +
-                 '<span class="ui ' + color + ' label">' + tag + '</span>' + 
-                 '</td>').appendTo($tr);
-
-  var $commentsTd = $('<td>' + comments + '</td>').appendTo($tr);
 }
 
 function findDateItem(date) {
