@@ -67,12 +67,7 @@ var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soir
  */
 
 var TRAINING_PATCHES = [
-  // Moved trainings
-  { date: '2019-09-09', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
-  { date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
-  { date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
-  { date: '2019-09-30', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
-  
+ 
   // Leasures
   { date: '2020-03-13', kind: 'internal', warning: 'Pas d\'entraînement', comments: 'Tournoi en simples, réservé aux joueurs du club.<br />A priori, un seul tableau (hommes, femmes, débutants, anciens... seront mélangés), sauf s\'il y a suffisamment de participants pour faire deux groupes.' },
 

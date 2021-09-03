@@ -36,17 +36,19 @@ var LOC_CHARIBAD = 'La Charité - Gymnase du complexe Georges Picq';
 
 var REGULAR_TRAINING_LOCATIONS = {
   1: LOC_VDN,
+  4: LOC_VDN2,
   5: LOC_VDN2
 };
 var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
+  4: '19h30-22h30',
   5: '19h30-22h30'
 };
-var CALENDAR_START = moment('2020-09-07');
-var CALENDAR_END = moment('2021-07-31');
-var REGULAR_TRAINING_START = moment('2020-09-07');
-var REGULAR_TRAINING_END   = moment('2021-07-02');
-var REGULAR_TRAINING_DAYS  = [1, 5]; // Monday, Friday
+var CALENDAR_START = moment('2021-09-06');
+var CALENDAR_END = moment('2022-07-01');
+var REGULAR_TRAINING_START = moment('2021-09-06');
+var REGULAR_TRAINING_END   = moment('2022-07-01');
+var REGULAR_TRAINING_DAYS  = [1, 4, 5]; // Monday, Thursday, Friday
 
 var TXT_LEASURE = 'Les joueurs des clubs locaux se rencontrent au cours d\'un tournoi amical.<br />'
                 + 'Les équipes sont constituées autant que possible de débutants.';
@@ -85,6 +87,7 @@ var TRAINING_PATCHES = [
   // Other
 ];
 
+// To be updated "soon"
 var ADDITIONAL_EVENTS = [
 
   // Leasures
