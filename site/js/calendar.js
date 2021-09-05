@@ -41,7 +41,7 @@ var REGULAR_TRAINING_LOCATIONS = {
 };
 var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
-  4: '19h30-22h30',
+  4: '20h-22h30',
   5: '19h30-22h30'
 };
 var CALENDAR_START = moment('2021-09-06');
@@ -70,6 +70,8 @@ var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soir
  */
 
 var TRAINING_PATCHES = [
+  { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée', comments: 'De retour pour une nouvelle année !' },
+
   // Moved trainings
   //{ date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
   //{ date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
