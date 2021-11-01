@@ -28,6 +28,7 @@ var KIND_TAGS = {
 
 var LOC_VDN      = 'Nevers - Maison des Sports';
 var LOC_VDN2     = 'Nevers - Gymnase des Loges';
+var LOC_ISAT     = 'Nevers - Maison des Sports (ISAT)';
 var LOC_OPEN     = 'Nevers - Gymnase Jean Rostand';
 var LOC_MARZY    = 'Marzy - Gymnase multisport';
 var LOC_ASGU     = 'Guérigny - Gymnase des forges';
@@ -50,8 +51,8 @@ var REGULAR_TRAINING_START = moment('2021-09-06');
 var REGULAR_TRAINING_END   = moment('2022-07-01');
 var REGULAR_TRAINING_DAYS  = [1, 4, 5]; // Monday, Thursday, Friday
 
-var TXT_LEASURE = 'Les joueurs des clubs locaux se rencontrent au cours d\'un tournoi amical.<br />'
-                + 'Les équipes sont constituées autant que possible de débutants.';
+var TXT_LEASURE = 'Tournoi amical avec les joueurs des clubs locaux.<br />'
+                + 'Priorité aux débutants.';
 var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soirée.<br />' +
                'Les résultats des matchs comptent pour le classement final des équipes.';
 
@@ -69,53 +70,59 @@ var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soir
  * By default, training events come with date, kind, location, hours. You can override everything but the date.
  */
 
+/** Patches on training events */
 var TRAINING_PATCHES = [
-  { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée', comments: 'De retour pour une nouvelle année !' },
-
   // Moved trainings
-  { date: '2021-11-01', kind: 'move', hours: '20h-22h30', warning: 'Maison des Sports fermée', newLocation: LOC_VDN2 },
-  //{ date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
+  { date: '2021-11-01', kind: 'move', hours: '20h-22h30', warning: 'Maison des Sports fermée (jour férié)',    newLocation: LOC_VDN2 },
+  { date: '2021-12-06', kind: 'move', hours: '20h-22h30', warning: 'Maison des Sports réservée par la mairie', newLocation: LOC_VDN2 },
 
-  // Canceled trainings
-  //{ date: '2020-12-07', kind: 'canceled', warning: TXT_WORKS }
+  // Internal events
+  { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée',           comments: 'De retour pour une nouvelle année !' },
+  { date: '2021-11-15', kind: 'internal',                           comments: 'Constituez les doubles de votre choix (hommes, dames, mixtes) et affrontez les autres au cours d\'un tournoi amical.' },
+  { date: '2021-12-13', kind: 'friendly', tag: 'Soirée de Noël',    comments: 'Entraînement et quelques surprises !' },
+  { date: '2021-12-16',                                             comments: 'Double soirée, voir ci-dessus' },
+  { date: '2022-01-10', kind: 'friendly', tag: 'Soirée Handisport', comments: '<i>Date à confirmer</i>' },
+  { date: '2022-01-13',                                             comments: 'Double soirée, voir ci-dessus' },
+  { date: '2022-02-07', kind: 'friendly', tag: 'Soirée crêpes',     comments: 'Entraînement et... crêpes. ' },
+  { date: '2022-02-28', kind: 'friendly', tag: 'Carnaval',          comments: 'Entraînement en tenue adaptée' },
+  { date: '2022-03-03',                                             comments: 'Double soirée, voir ci-dessus' },
+  { date: '2022-03-14', kind: 'internal',                           comments: 'Tournoi en simple par groupes de niveau' },
+  { date: '2022-03-17',                                             comments: 'Double soirée, voir ci-dessus' },
+  { date: '2022-04-25', kind: 'internal',                           comments: 'Constituez les doubles de votre choix (hommes, dames, mixtes) et affrontez les autres au cours d\'un tournoi amical.' },
+  { date: '2022-06-16',                                             comments: 'Double soirée, voir ci-dessus' },
 
-  // Holidays
-  // { date: '2018-12-24', kind: 'holidays' },
-  
   // Leasures
-  // { date: '2019-06-24', kind: 'leasure', warning: 'Espace réduit', comments: 'Doubles H / Doubles D<br />' + TXT_LEASURE },
-  // { date: '2020-03-13', kind: 'internal', warning: 'Pas d\'entraînement', comments: 'Tournoi en simples, réservé aux joueurs du club.<br />A priori, un seul tableau (hommes, femmes, débutants, anciens... seront mélangés), sauf s\'il y a suffisamment de participants pour faire deux groupes.' },
+  { date: '2022-03-28', kind: 'leasure', comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2022-05-09', kind: 'leasure', comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
 
-  // Other
+  // Team
+  { date: '2021-11-29', kind: 'team', comments: 'Doubles hommes et dames.<br />Espace réduit pour la séance normale.' },
+  { date: '2022-01-24', kind: 'team', comments: 'Doubles mixtes.<br />Espace réduit pour la séance normale.' }
 ];
 
-// To be updated "soon"
+/** Events added to the calendar */
 var ADDITIONAL_EVENTS = [
 
   // Leasures
-  { date: '2020-11-03', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2020-12-03', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
-  { date: '2021-01-14', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2021-02-01', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Simples dames, doubles hommes<br />' + TXT_LEASURE, warning: 'Pas de séance' },
-  { date: '2021-03-09', kind: 'leasure', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles dames, doubles hommes<br />' + TXT_LEASURE },
-  { date: '2021-04-01', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2021-04-29', kind: 'leasure', hours: '20h', location: LOC_MARZY,    comments: 'Doubles mixtes<br />' + TXT_LEASURE },
-  { date: '2021-05-17', kind: 'leasure', hours: '20h', location: LOC_VDN,      comments: 'Simples hommes, doubles dames<br />' + TXT_LEASURE, warning: 'Pas de séance' },
-  { date: '2021-06-03', kind: 'leasure', hours: '20h', location: LOC_ASGU,     comments: 'Tirage au sort des doubles<br />' + TXT_LEASURE },
+  { date: '2021-11-18', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2021-12-08', kind: 'leasure', hours: '20h', location: LOC_ISAT,  comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
+  { date: '2022-01-13', kind: 'leasure', hours: '20h', location: LOC_MARZY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2022-03-03', kind: 'leasure', hours: '20h', location: LOC_MARZY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2022-03-17', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
+  { date: '2022-06-16', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles tirés au sort<br />' + TXT_LEASURE },
 
-  // Competition
-  { date: '2020-11-22', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, comments: 'Tournoi en double sur la journée.<br />Repas ensemble le midi.' },
-  { date: '2021-03-07', kind: 'competition', hours: '9h-18h', location: LOC_VDN,  comments: 'Tournoi en double sur la journée.<br />Repas ensemble le midi.' },
+  // Internal
+  { date: '2022-06-26', kind: 'friendly', tag: 'Repas de fin d\'année', comments: 'Lieu et horaire à confirmer' },
 
   // Team
-  { date: '2020-12-07', kind: 'team', hours: '20h', location: LOC_VDN,      comments: 'Doubles mixtes<br />' + TXT_TEAM + '<br /><br />Espace réduit pour la séance normale.' },
-  { date: '2021-01-19', kind: 'team', hours: '20h', location: LOC_CHARIBAD, comments: 'Doubles hommes, doubles dames<br />' + TXT_TEAM },
-  { date: '2021-02-25', kind: 'team', hours: '20h', location: LOC_ASGU,     comments: 'Doubles mixtes<br />' + TXT_TEAM },
-  { date: '2021-04-05', kind: 'team', hours: '20h', location: LOC_VDN,      comments: 'Doubles hommes, doubles dames<br />' + TXT_TEAM + '<br /><br />Espace réduit pour la séance normale.' },
-  { date: '2021-05-06', kind: 'team', hours: '20h', location: LOC_ASGU,     comments: 'Simples hommes, simples dames<br />' + TXT_TEAM },
+  { date: '2021-12-16', kind: 'team', hours: '20h', location: LOC_ASGU, comments: 'Doubles mixtes' },
+  { date: '2022-02-02', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
+  { date: '2022-04-06', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles mixtes' },
+  { date: '2022-05-18', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
 
-  // Other
-  { date: '2020-09-05', kind: 'friendly', tag: 'Samedi Sports', hours: '10h-18h', location: 'Parc Salengro', comments: 'Le club tiendra un stand toute la journée. Volontaires recherchés !' },
+  // Competitions
+  { date: '2022-03-27', kind: 'competition', location: LOC_ASGU, tag: 'Tournoi Guérigny', comments: 'Format à préciser<br />En général, participation de 4€, démarrage à 9h, tournoi en doubles hommes et doubles mixtes' },
+  { date: '2022-05-22', kind: 'competition', location: LOC_VDN,  tag: 'Tournoi du club',  comments: 'Format à préciser<br />En général, participation de 4€, démarrage à 9h, tournoi en doubles hommes et doubles mixtes' }
 ];
 
 
@@ -282,7 +289,7 @@ function addEvent($eventTable, monthEvent) {
   }
 
   // Location
-  var $locationTd  = $('<td></td>').appendTo($tr);
+  var $locationTd  = $('<td class="collapsing"></td>').appendTo($tr);
   if (!!location) {
     $('<span>' + location + '</span>').appendTo($locationTd);
   }
