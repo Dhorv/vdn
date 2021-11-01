@@ -11,7 +11,7 @@ var KIND_COLORS = {
   holidays:    'black',
   internal:    'purple',
   leasure:     'green',
-  move:        'grey',
+  move:        'orange',
   team:        'red',
   training:    'grey'
 };
@@ -73,7 +73,7 @@ var TRAINING_PATCHES = [
   { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée', comments: 'De retour pour une nouvelle année !' },
 
   // Moved trainings
-  //{ date: '2019-09-16', kind: 'move', warning: TXT_WORKS, newLocation: LOC_VDN2 + ' (19h30-22h)' },
+  { date: '2021-11-01', kind: 'move', hours: '20h-22h30', warning: 'Maison des Sports fermée', newLocation: LOC_VDN2 },
   //{ date: '2019-09-23', kind: 'move', warning: 'SIVIM',   newLocation: LOC_VDN2 + ' (19h30-22h)', comments: 'La Maison des Sports est réquisitionnée pour le SIVIM.' },
 
   // Canceled trainings
@@ -261,7 +261,6 @@ function addEvent($eventTable, monthEvent) {
 
   if (monthEvent.kind === 'move' || monthEvent.kind === 'canceled' || monthEvent.kind === 'holidays') {
     location = null;
-    hours = '';
   }
 
   var $tr = $('<tr>').appendTo($eventTable);
@@ -287,19 +286,20 @@ function addEvent($eventTable, monthEvent) {
   if (!!location) {
     $('<span>' + location + '</span>').appendTo($locationTd);
   }
+  if (!!newLocation) {
+    $('<i class="ui blue icon right arrow"></i>').appendTo($locationTd);
+    $('<span>' + newLocation + '</span>').appendTo($locationTd);
+  }
 
   // Comments
   var $commentsTd = $('<td>' + comments + '</td>').appendTo($tr);
 
   if (!!warning) {
-    $('<br />').appendTo($commentsTd);
+    if (!!comments) {
+      $('<br />').appendTo($commentsTd);
+    }
     $('<i class="ui red icon warning sign"></i>').appendTo($commentsTd);
     $('<span style="color: red;">' + warning + '</span>').appendTo($commentsTd);
-  }
-  if (!!newLocation) {
-    $('<br />').appendTo($commentsTd);
-    $('<i class="ui blue icon right arrow"></i>').appendTo($commentsTd);
-    $('<span>' + newLocation + '</span>').appendTo($commentsTd);
   }
 
 }
