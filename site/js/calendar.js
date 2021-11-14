@@ -121,8 +121,8 @@ var ADDITIONAL_EVENTS = [
   { date: '2022-05-18', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
 
   // Competitions
-  { date: '2022-03-27', kind: 'competition', location: LOC_ASGU, tag: 'Tournoi Guérigny', comments: 'Format à préciser<br />En général, participation de 4€, démarrage à 9h, tournoi en doubles hommes et doubles mixtes' },
-  { date: '2022-05-22', kind: 'competition', location: LOC_VDN,  tag: 'Tournoi du club',  comments: 'Format à préciser<br />En général, participation de 4€, démarrage à 9h, tournoi en doubles hommes et doubles mixtes' }
+  { date: '2021-11-28', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, tag: 'Tournoi Guérigny', comments: 'Double mixte et double homme<br />Participation de 5€ (le paiement se fera sur place)<br /> Le repas du midi est offert par le club.' },
+  { date: '2022-05-22', kind: 'competition',                  location: LOC_VDN,  tag: 'Tournoi du club',  comments: 'Format à préciser<br />En général, participation de 4€, démarrage à 9h, tournoi en doubles hommes et doubles mixtes' }
 ];
 
 
