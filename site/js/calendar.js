@@ -96,7 +96,7 @@ var TRAINING_PATCHES = [
   { date: '2022-05-09', kind: 'leasure', comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
 
   // Team
-  { date: '2021-11-29', kind: 'team', comments: 'Doubles hommes et dames.<br />Espace réduit pour la séance normale.' },
+  { date: '2021-11-29', kind: 'team', comments: 'Doubles hommes et dames.<br />Séance délocalisée.' },
   { date: '2022-01-24', kind: 'team', comments: 'Doubles mixtes.<br />Espace réduit pour la séance normale.' }
 ];
 
@@ -122,7 +122,10 @@ var ADDITIONAL_EVENTS = [
 
   // Competitions
   { date: '2021-11-28', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, tag: 'Tournoi Guérigny', comments: 'Double mixte et double homme<br />Participation de 5€ (le paiement se fera sur place)<br /> Le repas du midi est offert par le club.' },
-  { date: '2022-05-22', kind: 'competition',                  location: LOC_VDN,  tag: 'Tournoi du club',  comments: 'Format à préciser<br />En général, participation de 4€, démarrage à 9h, tournoi en doubles hommes et doubles mixtes' }
+  { date: '2022-05-22', kind: 'competition',                  location: LOC_VDN,  tag: 'Tournoi du club',  comments: 'Format à préciser<br />En général, participation de 4€, démarrage à 9h, tournoi en doubles hommes et doubles mixtes' },
+
+  // Moved trainings when there also are events in main location
+  { date: '2021-11-29', kind: 'move', hours: '20h-22h30', warning: 'Maison des Sports réservée pour la compétition', newLocation: LOC_VDN2 },
 ];
 
 
