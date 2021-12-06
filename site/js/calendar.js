@@ -73,8 +73,8 @@ var TXT_TEAM = 'Les équipes des clubs locaux s\'affrontent au cours d\'une soir
 /** Patches on training events */
 var TRAINING_PATCHES = [
   // Moved trainings
-  { date: '2021-11-01', kind: 'move', hours: '20h-22h30', warning: 'Maison des Sports fermée (jour férié)',    newLocation: LOC_VDN2 },
-  { date: '2021-12-06', kind: 'move', hours: '20h-22h30', warning: 'Maison des Sports réservée par la mairie', newLocation: LOC_VDN2 },
+  { date: '2021-11-01', kind: 'move', hours: '20h-22h30',   warning: 'Maison des Sports fermée (jour férié)',    newLocation: LOC_VDN2 },
+  { date: '2021-12-06', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports réservée par la mairie', newLocation: LOC_VDN2 },
 
   // Internal events
   { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée',           comments: 'De retour pour une nouvelle année !' },
