@@ -76,6 +76,14 @@ var TRAINING_PATCHES = [
   { date: '2021-11-01', kind: 'move', hours: '20h-22h30',   warning: 'Maison des Sports fermée (jour férié)',    newLocation: LOC_VDN2 },
   { date: '2021-12-06', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports réservée par la mairie', newLocation: LOC_VDN2 },
 
+  // Christmas holidays
+  { date: '2021-12-20', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports fermée pour les vacances', newLocation: LOC_VDN2 },
+  { date: '2021-12-27', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports fermée pour les vacances', newLocation: LOC_VDN2 },
+  { date: '2021-12-23', kind: 'canceled', warning: 'Vacances' },
+  { date: '2021-12-24', kind: 'canceled', warning: 'Vacances' },
+  { date: '2021-12-30', kind: 'canceled', warning: 'Vacances' },
+  { date: '2021-12-31', kind: 'canceled', warning: 'Vacances' },
+
   // Internal events
   { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée',           comments: 'De retour pour une nouvelle année !' },
   { date: '2021-11-15', kind: 'internal',                           comments: 'Constituez les doubles de votre choix (hommes, dames, mixtes) et affrontez les autres au cours d\'un tournoi amical.' },
@@ -110,12 +118,12 @@ var ADDITIONAL_EVENTS = [
   { date: '2022-03-03', kind: 'leasure', hours: '20h', location: LOC_MARZY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
   { date: '2022-03-17', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
   { date: '2022-06-16', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles tirés au sort<br />' + TXT_LEASURE },
+  { date: '2021-12-16', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles mixtes<br />' + TXT_LEASURE },
 
   // Internal
   { date: '2022-06-26', kind: 'friendly', tag: 'Repas de fin d\'année', comments: 'Lieu et horaire à confirmer' },
 
   // Team
-  { date: '2021-12-16', kind: 'team', hours: '20h', location: LOC_ASGU, comments: 'Doubles mixtes' },
   { date: '2022-02-02', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
   { date: '2022-04-06', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles mixtes' },
   { date: '2022-05-18', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
