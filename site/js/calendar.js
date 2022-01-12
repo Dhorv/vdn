@@ -114,7 +114,7 @@ var ADDITIONAL_EVENTS = [
   // Leasures
   { date: '2021-11-18', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles mixtes<br />' + TXT_LEASURE },
   { date: '2021-12-08', kind: 'leasure', hours: '20h', location: LOC_ISAT,  comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
-  { date: '2022-01-13', kind: 'leasure', hours: '20h', location: LOC_MARZY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
+  { date: '2022-01-13', kind: 'leasure', hours: '20h', location: LOC_MARZY, warning:  'Annulé (COVID)',  },
   { date: '2022-03-03', kind: 'leasure', hours: '20h', location: LOC_MARZY, comments: 'Doubles mixtes<br />' + TXT_LEASURE },
   { date: '2022-03-17', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
   { date: '2022-06-16', kind: 'leasure', hours: '20h', location: LOC_ASGU,  comments: 'Doubles tirés au sort<br />' + TXT_LEASURE },
