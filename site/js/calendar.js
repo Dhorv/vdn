@@ -42,7 +42,7 @@ var REGULAR_TRAINING_LOCATIONS = {
 };
 var REGULAR_TRAINING_HOURS = {
   1: '20h-22h30',
-  4: '20h-22h30',
+  4: '20h30-22h30',
   5: '19h30-22h30'
 };
 var CALENDAR_START = moment('2021-09-06');
