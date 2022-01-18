@@ -104,8 +104,8 @@ var TRAINING_PATCHES = [
   { date: '2022-05-09', kind: 'leasure', comments: 'Doubles hommes et dames<br />' + TXT_LEASURE },
 
   // Team
-  { date: '2021-11-29', kind: 'team', comments: 'Doubles hommes et dames.<br />Séance délocalisée.' },
-  { date: '2022-01-24', kind: 'team', comments: 'Doubles mixtes.<br />Espace réduit pour la séance normale.' }
+  //{ date: '2021-11-29', kind: 'team', comments: 'Doubles hommes et dames.<br />Séance délocalisée.' },
+  //{ date: '2022-01-24', kind: 'team', comments: 'Doubles mixtes.<br />Espace réduit pour la séance normale.' }
 ];
 
 /** Events added to the calendar */
@@ -124,9 +124,9 @@ var ADDITIONAL_EVENTS = [
   { date: '2022-06-26', kind: 'friendly', tag: 'Repas de fin d\'année', comments: 'Lieu et horaire à confirmer' },
 
   // Team
-  { date: '2022-02-02', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
-  { date: '2022-04-06', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles mixtes' },
-  { date: '2022-05-18', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
+  //{ date: '2022-02-02', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
+  //{ date: '2022-04-06', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles mixtes' },
+  //{ date: '2022-05-18', kind: 'team', hours: '20h', location: LOC_ISAT, comments: 'Doubles hommes et dames' },
 
   // Competitions
   { date: '2021-11-28', kind: 'competition', hours: '9h-18h', location: LOC_ASGU, tag: 'Tournoi Guérigny', comments: 'Double mixte et double homme<br />Participation de 5€ (le paiement se fera sur place)<br /> Le repas du midi est offert par le club.' },
