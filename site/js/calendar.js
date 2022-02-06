@@ -75,6 +75,8 @@ var TRAINING_PATCHES = [
   // Moved trainings
   { date: '2021-11-01', kind: 'move', hours: '20h-22h30',   warning: 'Maison des Sports fermée (jour férié)',    newLocation: LOC_VDN2 },
   { date: '2021-12-06', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports réservée par la mairie', newLocation: LOC_VDN2 },
+  { date: '2022-01-24', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports réservée par la mairie', newLocation: LOC_VDN2 },
+  { date: '2022-01-31', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports réservée par la mairie', newLocation: LOC_VDN2 },
 
   // Christmas holidays
   { date: '2021-12-20', kind: 'move', hours: '19h30-22h30', warning: 'Maison des Sports fermée pour les vacances', newLocation: LOC_VDN2 },
