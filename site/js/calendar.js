@@ -91,7 +91,7 @@ var TRAINING_PATCHES = [
   { date: '2021-12-16',                                             comments: 'Double soirée, voir ci-dessus' },
   { date: '2022-01-10', kind: 'friendly', tag: 'Soirée Handisport', comments: '<i>Date à confirmer</i>' },
   { date: '2022-01-13',                                             comments: 'Double soirée, voir ci-dessus' },
-  { date: '2022-02-07', kind: 'friendly', tag: 'Soirée crêpes',     comments: 'Entraînement et... crêpes. ' },
+  { date: '2022-02-07', kind: 'friendly', tag: 'Soirée crêpes',     comments: 'Entraînement et... crêpes.<br />La partie "crêpes" est annulée (COVID).' },
   { date: '2022-02-28', kind: 'friendly', tag: 'Carnaval',          comments: 'Entraînement en tenue adaptée' },
   { date: '2022-03-03',                                             comments: 'Double soirée, voir ci-dessus' },
   { date: '2022-03-14', kind: 'internal',                           comments: 'Tournoi en simple par groupes de niveau' },
