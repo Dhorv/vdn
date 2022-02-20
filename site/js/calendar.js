@@ -86,6 +86,10 @@ var TRAINING_PATCHES = [
   { date: '2021-12-30', kind: 'canceled', warning: 'Vacances' },
   { date: '2021-12-31', kind: 'canceled', warning: 'Vacances' },
 
+  // Nobody to open
+  { date: '2022-02-24', kind: 'canceled', warning: 'Gymnase fermé' },
+  { date: '2022-02-25', kind: 'canceled', warning: 'Gymnase fermé' },
+
   // Internal events
   { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée',           comments: 'De retour pour une nouvelle année !' },
   { date: '2021-11-15', kind: 'internal',                           comments: 'Constituez les doubles de votre choix (hommes, dames, mixtes) et affrontez les autres au cours d\'un tournoi amical.' },
