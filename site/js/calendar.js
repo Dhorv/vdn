@@ -92,6 +92,7 @@ var TRAINING_PATCHES = [
   { date: '2022-02-24', kind: 'canceled', warning: 'Gymnase fermé' },
   { date: '2022-02-25', kind: 'canceled', warning: 'Gymnase fermé' },
   { date: '2022-03-17', kind: 'canceled', warning: 'Séance annulée' },
+  { date: '2022-04-18', kind: 'canceled', warning: 'Séance annulée (Pâques)' },
 
   // Internal events
   { date: '2021-09-06', kind: 'friendly', tag: 'Rentrée',           comments: 'De retour pour une nouvelle année !' },
