@@ -167,10 +167,15 @@ var cursor = REGULAR_TRAINING_START.clone();
 while (cursor.isSameOrBefore(REGULAR_TRAINING_END)) {
   var date = cursor.clone();
   if (REGULAR_TRAINING_DAYS.indexOf(date.day()) !== -1) {
-    var existingEvent = findDateItem(date);
-    existingEvent.kind     = 'training';
-    existingEvent.location = REGULAR_TRAINING_LOCATIONS[date.day()];
-    existingEvent.hours    = REGULAR_TRAINING_HOURS[date.day()];
+    if (date.format('YYYY-MM-DD') >= '2022-04-01' && date.day() === 4) {
+      // Special case: stop generating thursdays
+    }
+    else {
+      var existingEvent = findDateItem(date);
+      existingEvent.kind     = 'training';
+      existingEvent.location = REGULAR_TRAINING_LOCATIONS[date.day()];
+      existingEvent.hours    = REGULAR_TRAINING_HOURS[date.day()];
+    }
   }
   cursor.add(1, 'day');
 }
