@@ -104,7 +104,6 @@ var TRAINING_PATCHES = [
   { date: '2022-03-03',                                             comments: 'Double soirée, voir ci-dessus' },
   { date: '2022-03-17',                                             comments: 'Double soirée, voir ci-dessus' },
   { date: '2022-04-04', kind: 'internal',                           comments: 'Tournoi en simple par groupes de niveau' },
-  { date: '2022-04-25', kind: 'internal',                           comments: 'Constituez les doubles de votre choix (hommes, dames, mixtes) et affrontez les autres au cours d\'un tournoi amical.' },
   { date: '2022-06-16',                                             comments: 'Double soirée, voir ci-dessus' },
 
   // Leasures
