@@ -38,6 +38,10 @@ body.body div.tertiary.segment.pageTitle {
   padding: 0 2em 2em;
 }
 
+strike.orange {
+  color: orange;
+}
+
 @media (max-width: 800px) {
   body.body div.navigation {
     display: none;
